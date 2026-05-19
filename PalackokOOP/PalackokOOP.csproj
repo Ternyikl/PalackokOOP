@@ -46,6 +46,8 @@
     <Compile Include="Palack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rekesz.cs" />
+    <Compile Include="VisszavalthatoPalack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

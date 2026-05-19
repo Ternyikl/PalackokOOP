@@ -9,9 +9,9 @@ namespace PalackokOOP
 {
 	internal class Palack
 	{
-		private string ital;
-		private int maxUrtartalom;
-		private int jelenlegiUrtartalom;
+		protected string ital;
+		protected int maxUrtartalom;
+		protected int jelenlegiUrtartalom;
 
 		public Palack(string ital, int maxUrtartalom, int jelenlegiUrtartalom)
 		{
@@ -70,6 +70,7 @@ namespace PalackokOOP
 			{
 				this.JelenlegiUrtartalom = this.JelenlegiUrtartalom + p1.JelenlegiUrtartalom;
 				p1.JelenlegiUrtartalom = 0;
+				p1.Ital = null;
 			}
 
 			if(this.Ital != p1.Ital)
