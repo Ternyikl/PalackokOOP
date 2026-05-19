@@ -25,10 +25,7 @@ namespace PalackokOOP
 			double osszSuly = 0;
 			if(this.palackok.Count > 0)
 			{
-				foreach (var item in palackok)
-				{
-					osszSuly += item.suly();
-				}
+				osszSuly = palackok.Sum(x => x.suly());
 			}
 
 			return osszSuly;
@@ -50,10 +47,24 @@ namespace PalackokOOP
 
 			foreach (var item in palackok)
 			{
-				
+				if (item.GetType() == typeof(VisszavalthatoPalack)) osszPenz += ((VisszavalthatoPalack)item).PalackDij;
 			}
 
 			return osszPenz;
+		}
+
+		public override string ToString()
+		{
+			string ki = "";
+
+			foreach (var item in this.palackok)
+			{
+				ki += item.ToString() + "\n";
+			}
+
+			ki += $"A rekesz súlya: {Math.Round(this.suly(), 2)} gramm";
+
+			return ki;
 		}
 	}
 }
