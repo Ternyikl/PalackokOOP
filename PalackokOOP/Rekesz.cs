@@ -62,7 +62,8 @@ namespace PalackokOOP
 				ki += item.ToString() + "\n";
 			}
 
-			ki += $"A rekesz súlya: {Math.Round(this.suly(), 2)} gramm";
+			ki += $"A rekesz súlya: {Math.Round(this.suly(), 2)} gramm,\n";
+			ki += $"A teljes értéke: {this.osszes_Penz()} Ft";
 
 			return ki;
 		}
